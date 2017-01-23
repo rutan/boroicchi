@@ -4,7 +4,7 @@ function generateJXACode(path) {
   return `
 var se = Application("System Events");
 var path = '${path}';
-se.desktops().forEach((desktop) => {
+se.desktops().forEach(function (desktop) {
     desktop.pictureRotation = 0;
     desktop.picture.set(path);
 });
